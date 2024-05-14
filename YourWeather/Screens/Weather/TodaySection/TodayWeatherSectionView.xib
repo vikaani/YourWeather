@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TodayWeatherSectionView" customModule="YourWeather" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="Ry9-kb-Y3P" id="k0d-tR-Dih"/>
+                <outlet property="titleLabel" destination="013-Ak-ydW" id="Ezj-vy-51I"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="174"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="013-Ak-ydW">
+                    <rect key="frame" x="0.0" y="10" width="393" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Ry9-kb-Y3P">
+                    <rect key="frame" x="0.0" y="50" width="393" height="124"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HqV-O0-zJJ">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="013-Ak-ydW" secondAttribute="trailing" id="D9m-49-rS0"/>
+                <constraint firstItem="Ry9-kb-Y3P" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="FGt-dS-Nip"/>
+                <constraint firstAttribute="bottom" secondItem="Ry9-kb-Y3P" secondAttribute="bottom" id="GJx-2F-rMK"/>
+                <constraint firstItem="Ry9-kb-Y3P" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="HgO-Vy-KK6"/>
+                <constraint firstItem="Ry9-kb-Y3P" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="50" id="XNZ-BW-uBE"/>
+                <constraint firstItem="013-Ak-ydW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ZNy-j9-S20"/>
+                <constraint firstItem="013-Ak-ydW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="f4D-D1-abQ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="84.732824427480907" y="-38.028169014084511"/>
+        </view>
+    </objects>
+</document>

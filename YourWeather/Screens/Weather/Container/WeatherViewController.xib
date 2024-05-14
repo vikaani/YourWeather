@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WeatherViewController" customModule="YourWeather" customModuleProvider="target">
+            <connections>
+                <outlet property="dayForecastSectionViewController" destination="b6g-TU-6wz" id="wFM-80-aRD"/>
+                <outlet property="todayWeatherSectionViewController" destination="d9j-Gu-sJF" id="rPC-VL-zOP"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="weatherInfoHeaderViewController" destination="sia-fO-1vb" id="XcE-oV-ePZ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" placeholderIntrinsicWidth="393" placeholderIntrinsicHeight="180" translatesAutoresizingMaskIntoConstraints="NO" id="UhW-1O-iug" userLabel="Header" customClass="WeatherInfoSectionView" customModule="YourWeather" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="59" width="393" height="180"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sp7-Qg-Xth">
+                    <rect key="frame" x="0.0" y="239" width="393" height="579"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="393" placeholderIntrinsicHeight="579" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IbB-wW-bQR">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="620"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="393" placeholderIntrinsicHeight="114" translatesAutoresizingMaskIntoConstraints="NO" id="3DE-8p-a2b" customClass="TodayWeatherSectionView" customModule="YourWeather" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E8y-rI-o4c" customClass="DayForecastSectionView" customModule="YourWeather" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="210" width="393" height="200"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="200" id="1eP-0e-VZo"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7JD-s6-yU1">
+                                    <rect key="frame" x="0.0" y="420" width="393" height="200"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="IbB-wW-bQR" firstAttribute="height" secondItem="sp7-Qg-Xth" secondAttribute="height" priority="250" id="VCY-uW-Lz8"/>
+                        <constraint firstAttribute="trailing" secondItem="IbB-wW-bQR" secondAttribute="trailing" id="YP1-1o-1Bh"/>
+                        <constraint firstAttribute="bottom" secondItem="IbB-wW-bQR" secondAttribute="bottom" id="jac-G1-ahW"/>
+                        <constraint firstItem="IbB-wW-bQR" firstAttribute="top" secondItem="sp7-Qg-Xth" secondAttribute="top" id="kgO-IR-PBm"/>
+                        <constraint firstItem="IbB-wW-bQR" firstAttribute="width" secondItem="sp7-Qg-Xth" secondAttribute="width" id="sj0-eO-p4G"/>
+                        <constraint firstItem="IbB-wW-bQR" firstAttribute="leading" secondItem="sp7-Qg-Xth" secondAttribute="leading" id="tCx-fT-II7"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="sp7-Qg-Xth" secondAttribute="bottom" id="GRb-ud-qgZ"/>
+                <constraint firstItem="sp7-Qg-Xth" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Rae-ow-isA"/>
+                <constraint firstItem="UhW-1O-iug" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="TA7-0z-Dri"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="UhW-1O-iug" secondAttribute="trailing" id="VBd-Nb-Kmj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sp7-Qg-Xth" secondAttribute="trailing" id="byG-En-nbK"/>
+                <constraint firstItem="sp7-Qg-Xth" firstAttribute="top" secondItem="UhW-1O-iug" secondAttribute="bottom" id="fmn-9P-MSz"/>
+                <constraint firstItem="UhW-1O-iug" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="xki-qH-GcQ"/>
+            </constraints>
+            <point key="canvasLocation" x="138.1679389312977" y="20.422535211267608"/>
+        </view>
+        <customObject id="sia-fO-1vb" userLabel="Header view controller" customClass="WeatherInfoHeaderViewController" customModule="YourWeather" customModuleProvider="target">
+            <connections>
+                <outlet property="headerView" destination="UhW-1O-iug" id="ENy-YJ-OYe"/>
+            </connections>
+        </customObject>
+        <customObject id="d9j-Gu-sJF" userLabel="Today weather section view controller" customClass="TodayWeatherSectionViewController" customModule="YourWeather" customModuleProvider="target">
+            <connections>
+                <outlet property="todayView" destination="3DE-8p-a2b" id="0JY-OX-BS2"/>
+            </connections>
+        </customObject>
+        <customObject id="b6g-TU-6wz" userLabel="Day forecast section view controller" customClass="DayForecastSectionViewController" customModule="YourWeather" customModuleProvider="target">
+            <connections>
+                <outlet property="dayForecastSectionView" destination="E8y-rI-o4c" id="6wZ-I5-mC4"/>
+            </connections>
+        </customObject>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
